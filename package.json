@@ -8,14 +8,15 @@
   },
   "type": "module",
   "scripts": {
-    "build": "node run-executable bin/hugo/hugo --config=hugo.config.json",
+    "build": "exec-bin bin/hugo/hugo --config=hugo.config.json",
     "postinstall": "hugo-installer --version binDependencies.hugo",
-    "start": "node run-executable bin/hugo/hugo --config=hugo.config.json --watch"
+    "start": "exec-bin bin/hugo/hugo --config=hugo.config.json --watch"
   },
   "binDependencies": {
     "hugo": "0.82.0"
   },
   "devDependencies": {
+    "exec-bin": "1.0.x",
     "hugo-installer": "3.0.x"
   }
 }
