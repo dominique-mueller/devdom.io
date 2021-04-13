@@ -6,10 +6,11 @@
     "type": "git",
     "url": "https://github.com/dominique-mueller/devdom.io"
   },
+  "type": "module",
   "scripts": {
-    "build": "",
+    "build": "node run-executable bin/hugo/hugo --config=hugo.config.json",
     "postinstall": "hugo-installer --version binDependencies.hugo",
-    "start": ""
+    "start": "node run-executable bin/hugo/hugo --config=hugo.config.json --watch"
   },
   "binDependencies": {
     "hugo": "0.82.0"
