@@ -1,0 +1,22 @@
+{
+  "name": "devdom.io",
+  "description": "My personal website.",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dominique-mueller/devdom.io"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "exec-bin bin/hugo/hugo --config=hugo.config.json",
+    "postinstall": "hugo-installer --version binDependencies.hugo",
+    "start": "exec-bin bin/hugo/hugo --config=hugo.config.json --watch"
+  },
+  "binDependencies": {
+    "hugo": "0.82.0"
+  },
+  "devDependencies": {
+    "exec-bin": "1.0.x",
+    "hugo-installer": "3.0.x"
+  }
+}
