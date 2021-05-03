@@ -8,15 +8,20 @@
   },
   "type": "module",
   "scripts": {
-    "build": "exec-bin bin/hugo/hugo --config=hugo.config.json",
+    "build": "npm run clean && exec-bin bin/hugo/hugo --config=hugo.config.json",
+    "clean": "rimraf public resources",
     "postinstall": "hugo-installer --version binDependencies.hugo",
-    "start": "exec-bin bin/hugo/hugo --config=hugo.config.json --watch"
+    "start": "open-cli http://localhost:1313 && npm run clean && exec-bin bin/hugo/hugo server --config=hugo.config.json"
   },
   "binDependencies": {
     "hugo": "0.82.0"
   },
   "devDependencies": {
     "exec-bin": "1.0.x",
-    "hugo-installer": "3.0.x"
+    "hugo-installer": "3.0.x",
+    "open-cli": "6.0.x",
+    "postcss": "8.2.x",
+    "postcss-cli": "8.3.x",
+    "rimraf": "3.0.x"
   }
 }
