@@ -1,4 +1,7 @@
 {
   "title": "Dominique Müller",
-  "defaultContentLanguage": "en"
+  "defaultContentLanguage": "en",
+  "languageCode": "en",
+
+  "disableKinds": ["taxonomy", "term", "RSS"]
 }
