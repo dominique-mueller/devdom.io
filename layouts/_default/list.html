@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+<h1>Blog</div>
+
+<ul>
+  {{ $paginator := .Paginate .Pages 10 }} {{ range $paginator.Pages }}
+  <li>{{ .Title }}</li>
+  {{ end }}
+</ul>
+
+{{ end }}
