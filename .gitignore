@@ -1,5 +1,6 @@
 # Custom Hugo binary folder
 /bin/
+/resources/
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,vscode,hugo
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,vscode,hugo

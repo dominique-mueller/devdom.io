@@ -1,3 +1,19 @@
-<header>
-  <h1>{{ .Site.Title }}</h1>
+<header class="header">
+  <div class="container header__container">
+
+    <h1 class="header__title">
+      <a class="header__title-link" href="/">{{ .Site.Title }}</a>
+    </h1>
+
+    <nav class="header__navigation">
+      <ul class="ui-list header__navigation-list">
+        {{ $currentPage := . }}
+        {{ range .Site.Menus.main }}
+        <li>
+          <a class="header__navigation-link{{ if $currentPage.IsMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
 </header>
