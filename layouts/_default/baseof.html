@@ -17,6 +17,9 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    {{ $script := resources.Get "scripts/script.js" | resources.Minify | resources.Fingerprint "sha512" }}
+    <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" async></script>
   </head>
 
   <body>
