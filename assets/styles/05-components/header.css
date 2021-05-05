@@ -4,7 +4,7 @@
 
 .header {
   padding: 32px 128px;
-  background-color: #24292e;
+  background-color: #252c35;
   color: #fff;
 }
 
@@ -21,10 +21,10 @@
 
 .header__title-link {
   display: flex;
-  padding: 4px 8px;
+  padding: 4px 6px;
   border-radius: 1px;
   background-color: #fff;
-  color: #24292e;
+  color: #252c35;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 700;
@@ -40,9 +40,9 @@
 
 .header__navigation-link {
   display: block;
-  padding: 8px 16px;
+  padding: 8px 12px;
   border-radius: 1px;
-  color: #999;
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   font-weight: 700;
   transition: background-color 0.15s ease, color 0.15s ease;
@@ -50,16 +50,16 @@
 
 .header__navigation-link:hover,
 .header__navigation-link:focus {
-  background-color: #32393f;
+  color: rgba(255, 255, 255, 0.85);
 }
 
 .header__navigation-link.is-active {
-  background-color: #32393f;
+  background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
 
 .header__navigation-link.is-active:hover,
 .header__navigation-link.is-active:focus {
-  background-color: #32393f;
+  background-color: rgba(255, 255, 255, 0.1);
   color: #fff;
 }
