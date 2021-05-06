@@ -26,7 +26,7 @@
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
         <li>
-          <a class="navigation-link{{ if $currentPage.IsMenuCurrent "main" . }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="navigation-link{{ if or ( $currentPage.IsMenuCurrent "main" . ) ( $currentPage.HasMenuCurrent "main" . ) }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
         </li>
         {{ end }}
       </ul>
