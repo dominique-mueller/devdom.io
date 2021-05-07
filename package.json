@@ -11,12 +11,14 @@
     "build": "npm run clean && exec-bin bin/hugo/hugo --config=hugo.config.json",
     "clean": "rimraf public resources",
     "postinstall": "hugo-installer --version binDependencies.hugo",
-    "start": "open-cli http://localhost:1313 && npm run clean && exec-bin bin/hugo/hugo server --config=hugo.config.json"
+    "start": "open-cli http://localhost:1313 && npm run clean && exec-bin bin/hugo/hugo server --config=hugo.config.json --disableFastRender",
+    "start:build": "browser-sync start --server public"
   },
   "binDependencies": {
     "hugo": "0.82.0"
   },
   "devDependencies": {
+    "browser-sync": "2.26.x",
     "exec-bin": "1.0.x",
     "hugo-installer": "3.0.x",
     "open-cli": "6.0.x",

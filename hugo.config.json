@@ -3,5 +3,6 @@
   "defaultContentLanguage": "en",
   "languageCode": "en",
 
-  "disableKinds": ["taxonomy", "term", "RSS"]
+  "disableKinds": ["taxonomy", "term", "RSS"],
+  "sectionPagesMenu": "main"
 }

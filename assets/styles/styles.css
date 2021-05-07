@@ -1,0 +1,29 @@
+/*
+  Styles
+
+  Notes:
+  - Styling follows the ITCSS architecture
+    See <https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture>
+  - Naming convention of classes follows the BEM naming convention
+    See <http://getbem.com/introduction>
+*/
+
+/* Layer 01: Settings */
+@import './01-settings/colors.css';
+
+/* Layer 02: Generic */
+@import './02-generic/box-sizing.css';
+@import './02-generic/normalize.css';
+
+/* Layer 03: Elements */
+@import './03-elements/body.css';
+@import './03-elements/img.css';
+
+/* Layer 04: Objects */
+@import './04-objects/container.css';
+@import './04-objects/ui-list.css';
+
+/* Layer 05: Components */
+@import './05-components/header.css';
+
+/* Layer 05: Utilities */

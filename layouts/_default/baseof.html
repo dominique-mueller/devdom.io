@@ -7,8 +7,19 @@
 
     <title>{{ .Title }}</title>
 
-    {{ $style := resources.Get "styles/index.css" | resources.PostCSS (dict "inlineImports" true) | resources.Minify | resources.Fingerprint "sha512" }}
+    {{ $style := resources.Get "styles/styles.css" | resources.PostCSS (dict "inlineImports" true) | resources.Minify |
+    resources.Fingerprint "sha512" }}
     <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" />
+
+    <!-- TODO: Self-host fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    {{ $script := resources.Get "scripts/script.js" | resources.Minify | resources.Fingerprint "sha512" }}
+    <script src="{{ $script.Permalink }}" integrity="{{ $script.Data.Integrity }}" defer></script>
   </head>
 
   <body>
