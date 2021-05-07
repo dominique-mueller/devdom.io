@@ -23,6 +23,8 @@
   </head>
 
   <body>
-    {{ partial "header" . }} {{ block "main" . }} {{ end }} {{ partial "footer" . }}
+    {{ partial "header" . }}
+    <div data-navigation-ids="outside-navigation">{{ block "main" . }} {{ end }}</div>
+    <div data-navigation-ids="outside-navigation">{{ partial "footer" . }}</div>
   </body>
 </html>

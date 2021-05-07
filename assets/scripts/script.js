@@ -33,14 +33,17 @@ const booleanFromString = (string) => {
  *   Implementation inspired by <https://hiddedevries.nl/en/blog/2017-01-29-using-javascript-to-trap-focus-in-an-element>
  * - While the navigation is visible, hitting "Esc" will close the navigation
  *   See <https://www.w3.org/TR/wai-aria-practices/#keyboard-interaction-7>
- * - While the navigation is visible, clicking on the backdrop element will close the navigation
+ * - While the navigation is visible, navigating the page through assistive technologies gets trapped within the navigation area, using
+ *   ("aria-hidden" on outside elements)
+ * - While the navigation is visible, clicking on the backdrop element will close the navigation (not available to assistive technologies)
  */
 const initMobileNavigation = () => {
   // Navigation elements
-  const rootElement = window.document.querySelector('[data-navigation-id="root"]');
+  const rootElement = window.document.querySelector('[data-navigation-id="navigation"]');
   const buttonElement = window.document.querySelector('[data-navigation-id="button"]');
   const listElement = window.document.querySelector('[data-navigation-id="list"]');
   const backdropElement = window.document.querySelector('[data-navigation-id="backdrop"]');
+  const outsideElements = window.document.querySelectorAll('[data-navigation-ids="outside-navigation"]');
 
   // Focusable elements within navigation
   const focusableElements = rootElement.querySelectorAll('a, button');
@@ -61,6 +64,9 @@ const initMobileNavigation = () => {
     buttonElement.classList.remove('is-pressed');
     listElement.classList.remove('is-visible');
     backdropElement.classList.remove('is-visible');
+    outsideElements.forEach((outsideElement) => {
+      outsideElement.removeAttribute('aria-hidden');
+    });
 
     // Cleanup event listeners
     backdropElement.removeEventListener('click', backdropElementClickEventHandler);
@@ -81,6 +87,9 @@ const initMobileNavigation = () => {
     buttonElement.classList.add('is-pressed');
     listElement.classList.add('is-visible');
     backdropElement.classList.add('is-visible');
+    outsideElements.forEach((outsideElement) => {
+      outsideElement.setAttribute('aria-hidden', booleanToString(true));
+    });
 
     // Setup event listeners
     backdropElement.addEventListener('click', backdropElementClickEventHandler);
