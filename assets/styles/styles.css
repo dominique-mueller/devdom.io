@@ -17,6 +17,7 @@
 
 /* Layer 03: Elements */
 @import './03-elements/body.css';
+@import './03-elements/img.css';
 
 /* Layer 04: Objects */
 @import './04-objects/container.css';

@@ -1,13 +1,27 @@
 <header class="header">
   <div class="container header__container">
 
-    <div class="header__bar">
+    <div class="header__bar"></div>
 
-      <h1 class="title">
-        <a class="title-link" href="/">{{ .Site.Title }}</a>
-      </h1>
+    <!--
+      NOTE:
+      Both "h1" within "a" and "a" within "h1" is valid per HTML5 spec. We choose "a" within "h1" simply because "a" is "display: inline" by
+      default, so it "feels more right".
+      See <https://stackoverflow.com/a/7023551/3510888>
+    -->
+    <h1 class="title">
+      <a class="title__link" href="/">{{ .Site.Title }}</a>
+    </h1>
 
-      <button class="navigation-button" type="button" aria-label="Show navigation" aria-pressed="false" data-navigation="button">
+    <!--
+      NOTE:
+      To support users of assistive technologies, the <nav> landmark should always be visible, with the navigation visibility toggle button
+      being placed inside.
+      See <https://www.a11ymatters.com/pattern/mobile-nav/#use-a-semantic-element-for-the-nav>
+    -->
+    <nav data-navigation-id="root">
+
+      <button class="navigation__button" type="button" data-navigation-id="button">
         <svg class="burger" width="32" height="32" viewBox="0 0 32 32">
           <g class="burger__group-top">
             <line class="burger__line burger__line-top" x1="6" x2="26" y1="16" y2="16"></line>
@@ -19,14 +33,11 @@
         </svg>
       </button>
 
-    </div>
-
-    <nav class="navigation" data-navigation="navigation">
-      <ul class="ui-list navigation-list">
+      <ul class="ui-list navigation__list" data-navigation-id="list">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
         <li>
-          <a class="navigation-link{{ if or ( $currentPage.IsMenuCurrent "main" . ) ( $currentPage.HasMenuCurrent "main" . ) }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
+          <a class="navigation__link{{ if or ( $currentPage.IsMenuCurrent "main" . ) ( $currentPage.HasMenuCurrent "main" . ) }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
         </li>
         {{ end }}
       </ul>
@@ -35,4 +46,4 @@
   </div>
 </header>
 
-<div class="header__backdrop" data-navigation="backdrop"></div>
+<div class="header__backdrop" data-navigation-id="backdrop"></div>
