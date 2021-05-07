@@ -39,14 +39,14 @@ const booleanFromString = (string) => {
  */
 const initMobileNavigation = () => {
   // Navigation elements
-  const rootElement = window.document.querySelector('[data-navigation-id="navigation"]');
+  const navigationElement = window.document.querySelector('[data-navigation-id="navigation"]');
   const buttonElement = window.document.querySelector('[data-navigation-id="button"]');
   const listElement = window.document.querySelector('[data-navigation-id="list"]');
   const backdropElement = window.document.querySelector('[data-navigation-id="backdrop"]');
-  const outsideElements = window.document.querySelectorAll('[data-navigation-ids="outside-navigation"]');
+  const outsideNavigationElements = window.document.querySelectorAll('[data-navigation-ids="outside-navigation"]');
 
   // Focusable elements within navigation
-  const focusableElements = rootElement.querySelectorAll('a, button');
+  const focusableElements = navigationElement.querySelectorAll('a, button');
   const firstFocusableElement = focusableElements[0];
   const lastFocusableElement = focusableElements[focusableElements.length - 1];
 
@@ -64,7 +64,7 @@ const initMobileNavigation = () => {
     buttonElement.classList.remove('is-pressed');
     listElement.classList.remove('is-visible');
     backdropElement.classList.remove('is-visible');
-    outsideElements.forEach((outsideElement) => {
+    outsideNavigationElements.forEach((outsideElement) => {
       outsideElement.removeAttribute('aria-hidden');
     });
 
@@ -87,7 +87,7 @@ const initMobileNavigation = () => {
     buttonElement.classList.add('is-pressed');
     listElement.classList.add('is-visible');
     backdropElement.classList.add('is-visible');
-    outsideElements.forEach((outsideElement) => {
+    outsideNavigationElements.forEach((outsideElement) => {
       outsideElement.setAttribute('aria-hidden', booleanToString(true));
     });
 
