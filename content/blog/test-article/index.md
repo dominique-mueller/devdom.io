@@ -36,4 +36,8 @@ I might even want to include a bunch of imagery, so let's test that.
 
 {{<image src="./images/test-image.jpg" title="This is a test image" alt="Test Image">}}
 
+Perhaps an image that's rather small?
+
+{{<image src="./images/test-image-small.jpg" title="This is a small test image" alt="Small Test Image">}}
+
 Looking good, I have to admit.
