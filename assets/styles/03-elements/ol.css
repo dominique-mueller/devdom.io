@@ -5,3 +5,8 @@ ol {
   margin-bottom: 1em;
   padding-left: 1em;
 }
+
+ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}

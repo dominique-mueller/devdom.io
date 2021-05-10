@@ -20,12 +20,18 @@ Possibly, I might list a few thigs to consider:
 
 - This is a list item that is so long, so incredible long and detailed, so that it spans across multiple lines - how insane is that?!
 - Now a shorter second item
+  - with
+  - nested
+  - items
 - Followed by a third item, cause why not
 
 There is also the option of ordered lists:
 
 1. First up, let's do a very long long item again, so that we can ensure everything wraps and looks properly across multiple lines
 2. Then, a shorter second item
+   1. with
+   2. nested
+   3. items
 3. Finally, a third item, who would've guessed
 
 Amazing, those list items. Right?
