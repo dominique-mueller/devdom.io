@@ -12,7 +12,7 @@ An introduction to the article could be presented right here.
 First up, let's test some basic styling. Sometimes, **things are very important**, and sometimes _things need to be highlighted_ in an
 article. From time to time, there is also a [link](https://github.com/) you can click, and such [a link could be potentially quite long](https://github.com/).
 From time to time, I might use inline code such as a fictional `runMe()` function you can call, or an even longer code block like
-`public class TestMe{}` (or something similar). If you want, you can use <kbd>Ctrl</kbd> + <kbd>c</kbd> to copy text.
+`public class TestMe{}` (or something similar). ~~This is not longer true.~~ If you want, you can use <kbd>Ctrl</kbd> + <kbd>c</kbd> to copy text.
 
 ## Lists
 
