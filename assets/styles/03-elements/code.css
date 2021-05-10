@@ -1,0 +1,13 @@
+/* Code */
+
+code {
+  display: inline-block;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+  border-radius: 3px;
+  background-color: #eee;
+  font-family: monospace;
+  font-size: 0.875rem;
+}

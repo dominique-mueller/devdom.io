@@ -1,7 +1,18 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</h1>
+<article class="container article">
+  <header class="article__header">
+    <h1 class="article__title">{{ .Title }}</h1>
+    <p class="article__subtitle">{{ .Params.Subtitle }}</p>
 
-<div>{{ .Content }}</div>
+    <p class="article__metadata">
+      By <strong>{{ .Params.author }}</strong>
+      <span class="article__metadata-separator">&ndash;</span>
+      Posted on <strong><time datetime="{{ .Date.Format "2006-01-01" }}">{{ .Date.Format "January 1, 2006" }}</time></strong>
+    </p>
+  </header>
+
+  <div class="article__content">{{ .Content }}</div>
+</article>
 
 {{ end }}

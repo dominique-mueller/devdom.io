@@ -1,5 +1,6 @@
 /* Elements: Img */
 
 img {
+  display: block;
   width: 100%;
 }

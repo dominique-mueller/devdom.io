@@ -1,21 +1,38 @@
 ---
-title: My test article
-subtitle: Introduction on into how to write a good test article
-description: More channels may sound like more to keep track of, but here's why that's a myth; With a greater number of topic- and project-specific channels, groups can focus their discussions among smaller numbers of people.
+title: My test article, with a potentially very long title that spans multiple lines
+subtitle: An article to test that the design is working as intended, using all elements in different combinations, with edge cases
 date: 2020-03-15
 author: Dominique Müller
 ---
 
-More channels may sound like more to keep track of, but here’s why that’s a myth: With a greater number `runMe()` function of topic- and project-specific channels, groups can focus their discussions among smaller numbers of people. Furthermore, each person can be in fewer channels, because only a handful of specific channels will be necessary for their daily work. More channels on a team doesn’t mean more work when they’re increasingly targeted and organized. More channels [with a fancy link](https://www.google.com) may sound like more to keep track of.
+An introduction to the article could be presented right here.
 
-## This is a second header
+## Formatting
 
-More channels may sound like more to keep track of, but here’s why that’s a myth: With a greater number of topic- and project-specific channels, groups can focus their discussions among smaller numbers of people. Furthermore, each person can be in fewer channels, because only a handful of specific channels will be necessary for their daily work. More channels on a team doesn’t mean more work when they’re increasingly targeted and organized.
+First up, let's test some basic styling. Sometimes, **things are very important**, and sometimes _things need to be highlighted_ in an
+article. From time to time, there is also a [link to something](https://github.com/) you can click. From time to time, I might use inline
+code such as a fictional `runMe()` function you can call.
 
-## Is this even reality?
+## Lists
 
-Furthermore, each person can be in fewer channels, because only a handful of specific channels will be necessary for their daily work.
+Possibly, I might list a few thigs to consider:
+
+- This is a list item that is so long, so incredible long and detailed, so that it spans across multiple lines - how insane is that?!
+- Now a shorter second item
+- Followed by a third item, cause why not
+
+There is also the option of ordered lists:
+
+1. First up, let's do a very long long item again, so that we can ensure everything wraps and looks properly across multiple lines
+2. Then, a shorter second item
+3. Finally, a third item, who would've guessed
+
+Amazing, those list items. Right?
+
+## Media
+
+I might even want to include a bunch of imagery, so let's test that.
 
 {{<image src="./images/test-image.jpg" title="This is a test image" alt="Test Image">}}
 
-More channels on a team doesn’t mean more work when they’re increasingly targeted and organized. More channels may sound like more to keep track of, but here’s why that’s a myth: With a greater number of topic- and project-specific channels, groups can focus their discussions among smaller numbers of people.
+Looking good, I have to admit.

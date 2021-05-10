@@ -1,0 +1,17 @@
+/* Elements: h2 */
+
+h2 {
+  margin-top: 2em; /* reset */
+  margin-bottom: 0; /* reset */
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #444;
+}
+
+@media (min-width: 720px) {
+  h2 {
+    font-size: 1.75rem;
+  }
+}
