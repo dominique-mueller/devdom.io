@@ -4,5 +4,12 @@
   "languageCode": "en",
 
   "disableKinds": ["taxonomy", "term", "RSS"],
-  "sectionPagesMenu": "main"
+  "sectionPagesMenu": "main",
+  "markup": {
+    "goldmark": {
+      "renderer": {
+        "unsafe": true
+      }
+    }
+  }
 }
