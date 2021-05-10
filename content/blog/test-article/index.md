@@ -10,8 +10,9 @@ An introduction to the article could be presented right here.
 ## Formatting
 
 First up, let's test some basic styling. Sometimes, **things are very important**, and sometimes _things need to be highlighted_ in an
-article. From time to time, there is also a [link to something](https://github.com/) you can click. From time to time, I might use inline
-code such as a fictional `runMe()` function you can call.
+article. From time to time, there is also a [link](https://github.com/) you can click, and such [a link could be potentially quite long](https://github.com/).
+From time to time, I might use inline code such as a fictional `runMe()` function you can call, or an even longer code block like
+`public class TestMe{}` (or something similar).
 
 ## Lists
 
