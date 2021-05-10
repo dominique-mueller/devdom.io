@@ -20,17 +20,15 @@
 @import './03-elements/body.css';
 @import './03-elements/code.css';
 @import './03-elements/em.css';
-@import './03-elements/figcaption.css';
 @import './03-elements/figure.css';
 @import './03-elements/h1.css';
 @import './03-elements/h2.css';
 @import './03-elements/img.css';
 @import './03-elements/kbd.css';
-@import './03-elements/li.css';
-@import './03-elements/ol.css';
+@import './03-elements/list.css';
 @import './03-elements/p.css';
 @import './03-elements/strong.css';
-@import './03-elements/ul.css';
+@import './03-elements/table.css';
 
 /* Layer 04: Objects */
 @import './04-objects/container.css';

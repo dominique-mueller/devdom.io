@@ -3,3 +3,10 @@
 figure {
   margin: 1.5em 0; /* partial reset */
 }
+
+figcaption {
+  margin-top: 0.5em;
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #777;
+}

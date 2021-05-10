@@ -36,6 +36,15 @@ There is also the option of ordered lists:
 
 Amazing, those list items. Right?
 
+## Tables
+
+Let's take a look at a table:
+
+| Name      | Description    |
+| :-------- | :------------- |
+| This item | A good one     |
+| That item | Also very good |
+
 ## Media
 
 I might even want to include a bunch of imagery, so let's test that.
