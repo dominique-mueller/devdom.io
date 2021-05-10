@@ -1,6 +1,7 @@
-/* Elements: Body */
+/* body */
 
 body {
+  margin: 0; /* reset */
   background-color: #fdfdfd;
   font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
 }

@@ -1,11 +1,12 @@
-/*
-  Styles
+/* Styles */
 
+/*
   Notes:
-  - Styling follows the ITCSS architecture
+  - Styling happens in layers, following the ITCSS architecture
     See <https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture>
   - Naming convention of classes follows the BEM naming convention
     See <http://getbem.com/introduction>
+  - Naming convention of stateful classes follows the SMACSS naming convention
 */
 
 /* Layer 01: Settings */
@@ -13,7 +14,6 @@
 
 /* Layer 02: Generic */
 @import './02-generic/box-sizing.css';
-@import './02-generic/normalize.css';
 
 /* Layer 03: Elements */
 @import './03-elements/a.css';
