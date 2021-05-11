@@ -16,19 +16,15 @@
 @import './02-generic/box-sizing.css';
 
 /* Layer 03: Elements */
-@import './03-elements/a.css';
 @import './03-elements/body.css';
 @import './03-elements/code.css';
-@import './03-elements/em.css';
 @import './03-elements/figure.css';
-@import './03-elements/h1.css';
-@import './03-elements/h2.css';
-@import './03-elements/img.css';
-@import './03-elements/kbd.css';
+@import './03-elements/heading.css';
+@import './03-elements/image.css';
+@import './03-elements/link.css';
 @import './03-elements/list.css';
-@import './03-elements/p.css';
-@import './03-elements/strong.css';
 @import './03-elements/table.css';
+@import './03-elements/text.css';
 
 /* Layer 04: Objects */
 @import './04-objects/container.css';

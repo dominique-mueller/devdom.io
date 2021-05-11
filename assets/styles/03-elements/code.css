@@ -52,3 +52,17 @@ pre code {
   font-size: 1rem;
   line-height: 1.5;
 }
+
+/* Keyboard shortcut */
+
+kbd {
+  padding-inline-start: 0.5em;
+  padding-inline-end: 0.5em;
+  box-decoration-break: clone; /* use correct padding even when split into multiple lines */
+  border-bottom: 0.25em solid #eee; /* replacement for padding-bottom which does not work on "display: inline" elements */
+  border-top: 0.25em solid #eee; /* replacement for padding-top which does not work on "display: inline" elements */
+  border-radius: 3px;
+  background-color: #eee;
+  font-family: monospace;
+  font-size: 0.875rem;
+}
