@@ -75,7 +75,7 @@ const HelloWorld: FunctionComponent = (): ReactElement => {
 
 {{% /code %}}
 
-Also, some edge cases:
+Also, testing the scrollbars:
 
 {{% code title="This is a hello world component" %}}
 
