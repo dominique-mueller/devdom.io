@@ -28,7 +28,15 @@ pre::-webkit-scrollbar {
 }
 
 pre::-webkit-scrollbar-thumb {
-  background-color: #77797b;
+  background-color: #77797b; /* similar to what Firefox renders */
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background-color: #646668; /* similar to what Firefox renders */
+}
+
+pre::-webkit-scrollbar-thumb:active {
+  background-color: #424446; /* similar to what Firefox renders */
 }
 
 pre code {
