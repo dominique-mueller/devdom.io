@@ -8,7 +8,7 @@ code {
   border-bottom: 0.25em solid #eee; /* replacement for padding-bottom which does not work on "display: inline" elements */
   border-radius: 3px;
   background-color: #eee;
-  font-family: monospace;
+  font-family: 'Consolas', monospace;
   font-size: 0.875rem;
 }
 
@@ -18,10 +18,21 @@ pre {
   margin-top: 0; /* reset */
   margin-bottom: 0; /* reset */
   border-radius: 3px;
+  overflow-x: auto; /* use vertical scrollbar, if necessary */
+  scrollbar-width: thin;
+  scrollbar-color: dark;
+}
+
+pre::-webkit-scrollbar {
+  height: 7px; /* similar to what Firefox renders */
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: #77797b;
 }
 
 pre code {
-  display: block;
+  display: inline-block; /* Make padding-right work even when overflow is active */
   padding-inline-start: unset;
   padding-inline-end: unset;
   padding: 1em 1.25em;
@@ -29,7 +40,6 @@ pre code {
   border-top: unset;
   border-bottom: unset;
   border-radius: unset;
-  overflow-x: auto; /* use vertical scrollbar, if necessary */
   background-color: unset;
   font-size: 1rem;
   line-height: 1.5;

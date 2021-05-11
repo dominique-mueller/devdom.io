@@ -74,3 +74,15 @@ const HelloWorld: FunctionComponent = (): ReactElement => {
 ```
 
 {{% /code %}}
+
+Also, some edge cases:
+
+{{% code title="This is a hello world component" %}}
+
+```tsx
+const thisIsAVeryLongFunctionNameHowInsaneIsThatTheQuestionIsHowWillItBehaveInTheArticleIAmVeryInterestedInTheAnswerIndeed = () => {
+  // TODO: Implementation
+};
+```
+
+{{% /code %}}
