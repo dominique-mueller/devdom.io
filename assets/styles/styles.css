@@ -37,5 +37,6 @@
 /* Layer 05: Components */
 @import './05-components/article.css';
 @import './05-components/header.css';
+@import './05-components/highlight.css';
 
 /* Layer 05: Utilities */

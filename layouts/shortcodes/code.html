@@ -1,5 +1,5 @@
 <figure>
-  <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}">
+  {{ .Inner }}
 
   {{ with .Get "title" }}
   <figcaption>{{ . }}</figcaption>

@@ -1,13 +1,36 @@
-/* code */
+/* Inline code */
 
 code {
   padding-inline-start: 0.5em;
   padding-inline-end: 0.5em;
   box-decoration-break: clone; /* use correct padding even when split into multiple lines */
-  border-bottom: 0.25em solid #eee; /* replacement for padding-bottom which does not work on "display: inline" elements */
   border-top: 0.25em solid #eee; /* replacement for padding-top which does not work on "display: inline" elements */
+  border-bottom: 0.25em solid #eee; /* replacement for padding-bottom which does not work on "display: inline" elements */
   border-radius: 3px;
   background-color: #eee;
   font-family: monospace;
   font-size: 0.875rem;
+}
+
+/* Code block */
+
+pre {
+  margin-top: 0; /* reset */
+  margin-bottom: 0; /* reset */
+  border-radius: 3px;
+}
+
+pre code {
+  display: block;
+  padding-inline-start: unset;
+  padding-inline-end: unset;
+  padding: 1em 1.25em;
+  box-decoration-break: unset;
+  border-top: unset;
+  border-bottom: unset;
+  border-radius: unset;
+  overflow-x: auto; /* use vertical scrollbar, if necessary */
+  background-color: unset;
+  font-size: 1rem;
+  line-height: 1.5;
 }

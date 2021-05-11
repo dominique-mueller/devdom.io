@@ -42,7 +42,7 @@
 .article__content {
   /* improve readability by restricting content width to 60 characters */
   /* see <https://baymard.com/blog/line-length-readability> */
-  max-width: 60ch;
+  max-width: 65ch;
   margin-left: auto;
   margin-right: auto;
 }

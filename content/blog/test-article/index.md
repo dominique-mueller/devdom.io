@@ -49,10 +49,28 @@ Let's take a look at a table:
 
 I might even want to include a bunch of imagery, so let's test that.
 
-{{<image src="./images/test-image.jpg" title="This is a test image" alt="Test Image">}}
+{{< image src="./images/test-image.jpg" title="This is a test image" alt="Test Image" >}}
 
 Perhaps an image that's rather small?
 
-{{<image src="./images/test-image-small.jpg" title="This is a small test image" alt="Small Test Image">}}
+{{< image src="./images/test-image-small.jpg" title="This is a small test image" alt="Small Test Image" >}}
 
 Looking good, I have to admit.
+
+## Code
+
+Let's take a look at some nice little code snippets:
+
+{{% code title="This is a hello world component" %}}
+
+```tsx
+const HelloWorld: FunctionComponent = (): ReactElement => {
+  // State
+  const message = 'Hello World!';
+
+  // Render
+  return <p>{message}</p>;
+};
+```
+
+{{% /code %}}

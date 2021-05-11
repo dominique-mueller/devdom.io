@@ -5,11 +5,16 @@
 
   "disableKinds": ["taxonomy", "term", "RSS"],
   "sectionPagesMenu": "main",
+
   "markup": {
     "goldmark": {
       "renderer": {
         "unsafe": true
       }
+    },
+    "highlight": {
+      "noClasses": false,
+      "tabWidth": 2
     }
   }
 }

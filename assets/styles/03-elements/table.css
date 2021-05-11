@@ -2,6 +2,7 @@
 
 table {
   border-collapse: collapse; /* make borders work */
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
 }
 
 thead {
