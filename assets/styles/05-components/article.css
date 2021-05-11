@@ -3,7 +3,7 @@
 .article {
   font-family: 'Merriweather', 'Times New Roman', serif;
   color: #333;
-  font-size: 1.0625rem;
+  font-size: 1.125rem;
   line-height: 1.9;
 }
 
@@ -40,7 +40,9 @@
 }
 
 .article__content {
-  max-width: 75ch;
+  /* improve readability by restricting content width to 60 characters */
+  /* see <https://baymard.com/blog/line-length-readability> */
+  max-width: 60ch;
   margin-left: auto;
   margin-right: auto;
 }
