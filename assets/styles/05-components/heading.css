@@ -1,0 +1,39 @@
+/* Heading */
+
+.heading__anchor {
+  border: unset; /* reset */
+  float: left;
+  padding-right: 0.5em;
+  margin-left: -1.5em;
+  transition: unset;
+  color: #999;
+}
+
+@media (any-hover: hover) {
+  .heading__anchor {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.15s ease, visibility 0s linear 0.15s;
+  }
+
+  .heading:hover .heading__anchor,
+  .heading:focus .heading__anchor,
+  .heading:active .heading__anchor {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.15s ease, visibility 0s linear;
+  }
+}
+
+.heading__anchor:hover,
+.heading__anchor:focus {
+  background-color: unset;
+}
+
+.heading__anchor-icon {
+  width: 0.875em;
+  height: 0.875em;
+  margin-top: 0.0625em;
+  fill: currentColor;
+  transform: rotate(315deg);
+}

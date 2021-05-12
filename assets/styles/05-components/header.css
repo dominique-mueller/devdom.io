@@ -139,7 +139,7 @@
   padding: 8px 10px;
   border-radius: 1px;
   color: rgba(255, 255, 255, 0.6);
-  border: none; /* reset */
+  border: unset; /* reset */
   font-weight: 700;
   white-space: nowrap;
   opacity: 0;
