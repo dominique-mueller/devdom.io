@@ -23,6 +23,14 @@
   </head>
 
   <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      {{ $icons := resources.Match "icons/*.svg" }}
+      {{ range $icons }}
+        {{ $icon := resources.Get . }}
+        {{ $icon.Content | safeHTML }}
+      {{ end }}
+    </svg>
+
     {{ partial "header" . }}
     <main data-navigation-ids="outside-navigation" class="container">{{ block "main" . }} {{ end }}</main>
     <div data-navigation-ids="outside-navigation">{{ partial "footer" . }}</div>
