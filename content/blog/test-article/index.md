@@ -1,6 +1,5 @@
 ---
 title: My test article, with a potentially very long title that spans multiple lines
-subtitle: An article to test that the design is working as intended, using all elements in different combinations, with edge cases
 date: 2020-03-15
 author: Dominique Müller
 ---

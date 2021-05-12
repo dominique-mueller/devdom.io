@@ -12,21 +12,6 @@
   text-align: center;
 }
 
-.article__subtitle {
-  margin-bottom: 0; /* reset */
-  margin-top: 0.375em;
-  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.2;
-  color: #333;
-}
-
-@media (min-width: 720px) {
-  .article__subtitle {
-    font-size: 1.875rem;
-  }
-}
-
 .article__metadata {
   margin-top: 1.5em;
   margin-bottom: 0;
