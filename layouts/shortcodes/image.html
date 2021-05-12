@@ -1,7 +1,8 @@
 <figure>
-  <img src="{{ .Get "src" }}" alt="{{ .Get "alt" }}">
+  {{ $image := .Page.Resources.GetMatch (printf "%s" (.Get "src" | safeURL)) | resources.Fingerprint "md5" }}
+  <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="{{ .Get "alt" }}" />
 
-  {{ with .Get "title" }}
+  {{ with .Get "caption" }}
   <figcaption>{{ . }}</figcaption>
   {{ end }}
 </figure>
