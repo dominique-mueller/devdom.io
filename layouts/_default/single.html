@@ -11,7 +11,7 @@
       Posted on <strong><time datetime="{{ .Date.Format "2006-01-01" }}">{{ .Date.Format "January 1, 2006" }}</time></strong>
     </p>
 
-    <ul class="ui-list article__tags">
+    <ul class="ui-list article__tags" aria-label="Tags">
       {{ range .Params.tags }}
       <li class="ui-list__item article__tag">
         {{ . }}
