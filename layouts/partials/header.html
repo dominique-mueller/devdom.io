@@ -36,7 +36,7 @@
       <ul class="ui-list navigation__list" data-navigation-id="list">
         {{ $currentPage := . }}
         {{ range .Site.Menus.main }}
-        <li>
+        <li class="ui-list__item">
           <a class="navigation__link{{ if or ( $currentPage.IsMenuCurrent "main" . ) ( $currentPage.HasMenuCurrent "main" . ) }} is-active{{ end }}" href="{{ .URL }}">{{ .Name }}</a>
         </li>
         {{ end }}

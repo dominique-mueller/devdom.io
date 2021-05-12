@@ -7,6 +7,6 @@
   list-style-type: none;
 }
 
-.ui-list > li {
+.ui-list__item {
   padding-left: 0;
 }

@@ -2,6 +2,10 @@
 title: My test article, with a potentially very long title that spans multiple lines
 date: 2020-03-15
 author: Dominique Müller
+tags:
+- development
+- react
+- design-systems
 ---
 
 An introduction to the article could be presented right here.

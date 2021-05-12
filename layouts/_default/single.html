@@ -10,6 +10,14 @@
       <span class="article__metadata-separator">&ndash;</span>
       Posted on <strong><time datetime="{{ .Date.Format "2006-01-01" }}">{{ .Date.Format "January 1, 2006" }}</time></strong>
     </p>
+
+    <ul class="ui-list article__tags">
+      {{ range .Params.tags }}
+      <li class="ui-list__item article__tag">
+        {{ . }}
+      </li>
+      {{ end }}
+    </ul>
   </header>
 
   <div class="article__content">{{ .Content }}</div>

@@ -1,21 +1,21 @@
 /* Article */
 
 .article {
-  font-family: 'Merriweather', 'Times New Roman', serif;
   color: #333;
   font-size: 1.0625rem;
   line-height: 1.9;
 }
 
+/* Article header */
+
 .article__header {
-  padding: 128px 64px 96px 64px;
+  padding: 128px 64px 80px 64px;
   text-align: center;
 }
 
 .article__metadata {
   margin-top: 1.5em;
-  margin-bottom: 0;
-  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  margin-bottom: 0.5em;
 }
 
 .article__metadata-separator {
@@ -23,10 +23,33 @@
   padding-right: 0.25em;
 }
 
+.article__tags {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.article__tag {
+  padding-inline-start: 0.875em;
+  padding-inline-end: 0.875em;
+  padding-block-start: 0.4em;
+  padding-block-end: 0.4em;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #047857;
+  background-color: #d1fae5;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+/* Article content */
+
 .article__content {
   /* improve readability by restricting content width to 60 characters */
   /* see <https://baymard.com/blog/line-length-readability> */
   max-width: 65ch;
+  font-family: 'Merriweather', 'Times New Roman', serif;
   margin-left: auto;
   margin-right: auto;
 }
