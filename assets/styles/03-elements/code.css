@@ -17,7 +17,6 @@ code {
 pre {
   margin-top: 0; /* reset */
   margin-bottom: 0; /* reset */
-  border-radius: 3px;
   overflow-x: auto; /* use vertical scrollbar, if necessary */
   scrollbar-width: thin;
   scrollbar-color: dark;
@@ -49,7 +48,7 @@ pre code {
   border-bottom: unset;
   border-radius: unset;
   background-color: unset;
-  font-size: 1rem;
+  font-size: 0.9375rem;
   line-height: 1.5;
 }
 

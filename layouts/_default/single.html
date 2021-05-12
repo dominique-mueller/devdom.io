@@ -1,6 +1,7 @@
 {{ define "main" }}
 
-<article class="container article">
+<article class="article">
+
   <header class="article__header">
     <h1 class="article__title">{{ .Title }}</h1>
     <p class="article__subtitle">{{ .Params.Subtitle }}</p>
@@ -13,6 +14,7 @@
   </header>
 
   <div class="article__content">{{ .Content }}</div>
+
 </article>
 
 {{ end }}

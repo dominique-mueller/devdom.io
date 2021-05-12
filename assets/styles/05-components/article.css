@@ -3,13 +3,12 @@
 .article {
   font-family: 'Merriweather', 'Times New Roman', serif;
   color: #333;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   line-height: 1.9;
 }
 
 .article__header {
-  padding-top: 128px;
-  padding-bottom: 96px;
+  padding: 128px 64px 96px 64px;
   text-align: center;
 }
 

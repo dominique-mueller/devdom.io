@@ -2,9 +2,15 @@
 
 .header {
   position: relative; /* has absolute positioned children */
-  height: 64px;
+  height: 56px;
   background-color: #252c35;
   color: #fff;
+}
+
+@media (min-width: 720px) {
+  .header {
+    height: 72px;
+  }
 }
 
 .header__container {

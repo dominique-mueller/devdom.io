@@ -2,6 +2,7 @@
 /* Implementation inspired by <https://gist.github.com/sheck/a4d55cd7142d016e2a5c> */
 
 .highlight {
+  border-radius: 3px;
   background-color: #24292e;
   color: #d8dee9;
 }
