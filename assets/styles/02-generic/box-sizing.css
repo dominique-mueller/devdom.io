@@ -1,7 +1,8 @@
-/*
-  Generic: Box-sizing
+/* Box Sizing */
 
-  Note: Implementation inspired by https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+/*
+  Notes:
+  - Implementation inspired by https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 */
 
 html {

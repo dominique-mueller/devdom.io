@@ -1,0 +1,7 @@
+<figure>
+  {{ .Inner }}
+
+  {{ with .Get "title" }}
+  <figcaption>{{ . }}</figcaption>
+  {{ end }}
+</figure>

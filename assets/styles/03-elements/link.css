@@ -1,0 +1,15 @@
+/* Link */
+
+a {
+  color: #1d4ed8;
+  text-decoration: none; /* reset */
+  border-bottom: 1px solid #93c5fd;
+  transition: background-color 0.15s ease, border-bottom-color 0.15s ease;
+}
+
+a:hover,
+a:focus,
+a:active {
+  border-bottom-color: #1d4ed8;
+  background-color: #eff6ff;
+}

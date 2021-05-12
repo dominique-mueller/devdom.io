@@ -1,0 +1,18 @@
+/* p */
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/* strong */
+
+strong {
+  font-weight: 700;
+}
+
+/* em */
+
+em {
+  font-style: italic;
+}

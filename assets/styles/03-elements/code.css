@@ -1,0 +1,67 @@
+/* Inline code */
+
+code {
+  padding-inline-start: 0.5em;
+  padding-inline-end: 0.5em;
+  box-decoration-break: clone; /* use correct padding even when split into multiple lines */
+  border-top: 0.25em solid #eee; /* replacement for padding-top which does not work on "display: inline" elements */
+  border-bottom: 0.25em solid #eee; /* replacement for padding-bottom which does not work on "display: inline" elements */
+  border-radius: 3px;
+  background-color: #eee;
+  font-family: 'Consolas', monospace;
+  font-size: 0.875rem;
+}
+
+/* Code block */
+
+pre {
+  margin-top: 0; /* reset */
+  margin-bottom: 0; /* reset */
+  overflow-x: auto; /* use vertical scrollbar, if necessary */
+  scrollbar-width: thin;
+  scrollbar-color: dark;
+}
+
+pre::-webkit-scrollbar {
+  height: 7px; /* similar to what Firefox renders */
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: #77797b; /* similar to what Firefox renders */
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+  background-color: #646668; /* similar to what Firefox renders */
+}
+
+pre::-webkit-scrollbar-thumb:active {
+  background-color: #424446; /* similar to what Firefox renders */
+}
+
+pre code {
+  display: inline-block; /* Make padding-right work even when overflow is active */
+  padding-inline-start: unset;
+  padding-inline-end: unset;
+  padding: 1em 1.25em;
+  box-decoration-break: unset;
+  border-top: unset;
+  border-bottom: unset;
+  border-radius: unset;
+  background-color: unset;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+/* Keyboard shortcut */
+
+kbd {
+  padding-inline-start: 0.5em;
+  padding-inline-end: 0.5em;
+  box-decoration-break: clone; /* use correct padding even when split into multiple lines */
+  border-bottom: 0.25em solid #eee; /* replacement for padding-bottom which does not work on "display: inline" elements */
+  border-top: 0.25em solid #eee; /* replacement for padding-top which does not work on "display: inline" elements */
+  border-radius: 3px;
+  background-color: #eee;
+  font-family: monospace;
+  font-size: 0.875rem;
+}

@@ -1,0 +1,12 @@
+<!-- Implementation inspired by <https://github.com/gohugoio/gohugoioTheme/pull/146/files> -->
+
+<h{{ .Level }} class="heading" id="{{ .Anchor | safeURL }}">
+  {{- if and (ge .Level 2) (le .Level 4) }}{{" " -}}
+  <a class="heading__anchor" href="#{{ .Anchor | safeURL }}" aria-hidden="true">
+    <svg class="heading__anchor-icon" height="24" width="24">
+      <use xlink:href="#icon-link" />
+    </svg>
+  </a>
+  {{- end -}}
+  {{ .Text | safeHTML }}
+</h{{ .Level }}>

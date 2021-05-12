@@ -14,7 +14,7 @@
     <!-- TODO: Self-host fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito+Sans:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito+Sans:wght@400;700;800;900&display=swap"
       rel="stylesheet"
     />
 
@@ -23,8 +23,16 @@
   </head>
 
   <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      {{ $icons := resources.Match "icons/*.svg" }}
+      {{ range $icons }}
+        {{ $icon := resources.Get . }}
+        {{ $icon.Content | safeHTML }}
+      {{ end }}
+    </svg>
+
     {{ partial "header" . }}
-    <div data-navigation-ids="outside-navigation">{{ block "main" . }} {{ end }}</div>
+    <main data-navigation-ids="outside-navigation" class="container">{{ block "main" . }} {{ end }}</main>
     <div data-navigation-ids="outside-navigation">{{ partial "footer" . }}</div>
   </body>
 </html>
