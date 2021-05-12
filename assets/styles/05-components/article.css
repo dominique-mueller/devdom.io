@@ -9,13 +9,13 @@
 /* Article header */
 
 .article__header {
-  padding: 128px 64px 80px 64px;
+  padding: 144px 64px 64px 64px;
   text-align: center;
 }
 
 .article__metadata {
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
 
 .article__metadata-separator {
