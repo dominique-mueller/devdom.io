@@ -2,13 +2,14 @@
 
 .header {
   position: relative; /* has absolute positioned children */
-  height: 56px;
-  background-color: #252c35;
+  height: 64px;
+  background-color: #223144;
   color: #fff;
 }
 
 @media (min-width: 720px) {
   .header {
+    position: unset;
     height: 72px;
   }
 }
@@ -29,7 +30,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #252c35;
+  background-color: #223144;
   z-index: -1; /* behind upcoming elements */
 }
 
@@ -48,10 +49,10 @@
 
 .title__link {
   display: flex;
-  padding: 4px 10px 3px;
+  padding: 4px 12px 3px;
   border-radius: 1px;
   background-color: #fff;
-  color: #252c35;
+  color: #223144;
   border: none; /* reset */
   font-size: 1rem;
   font-weight: 700;
@@ -67,17 +68,25 @@
 
 .navigation__button {
   display: flex;
-  padding: 3px;
+  padding: 3px 5px;
   border: none; /* reset */
   background-color: transparent; /* reset */
   color: #fff;
   border-radius: 1px;
+  overflow: hidden; /* prevent weird visual glitching of focus outline due to internal animations overflowing button constraints */
   cursor: pointer;
+}
+
+.navigation__button:hover,
+.navigation__button:focus,
+.navigation__button:active {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .navigation__button.is-pressed,
 .navigation__button.is-pressed:hover,
-.navigation__button.is-pressed:focus {
+.navigation__button.is-pressed:focus,
+.navigation__button.is-pressed:active {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -95,9 +104,9 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   padding: 4px 16px 16px;
-  background-color: #252c35;
+  background-color: #223144;
   transform: translateY(0);
   visibility: hidden;
   transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear 0.3s;
@@ -136,7 +145,7 @@
 
 .navigation__link {
   display: block;
-  padding: 8px 10px;
+  padding: 8px 12px;
   border-radius: 1px;
   color: rgba(255, 255, 255, 0.6);
   border: unset; /* reset */
@@ -149,7 +158,15 @@
 .navigation__link:hover,
 .navigation__link:focus,
 .navigation__link:active {
-  background: none;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navigation__link.is-active,
+.navigation__link.is-active:hover,
+.navigation__link.is-active:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
 }
 
 @media (min-width: 720px) {
@@ -167,18 +184,6 @@
   .navigation__list.is-visible .navigation__link {
     opacity: unset;
   }
-}
-
-.navigation__link:hover,
-.navigation__link:focus {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-.navigation__link.is-active,
-.navigation__link.is-active:hover,
-.navigation__link.is-active:focus {
-  background-color: rgba(255, 255, 255, 0.1);
-  color: #fff;
 }
 
 .header__backdrop {
