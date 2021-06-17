@@ -1,0 +1,11 @@
+/* Outline */
+
+/*
+  Notes:
+  - We keep using the default outline styles (which are quite enhanced by the browser itself), but add some additional spacing
+*/
+
+*:focus,
+*:focus-visible {
+  outline-offset: 2px;
+}
