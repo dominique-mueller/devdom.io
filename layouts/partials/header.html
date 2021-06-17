@@ -1,8 +1,6 @@
 <header class="header">
   <div class="container header__container">
 
-    <div class="header__bar"></div>
-
     <!--
       NOTE:
       Both "h1" within "a" and "a" within "h1" is valid per HTML5 spec. We choose "a" within "h1" simply because "a" is "display: inline" by
@@ -19,7 +17,7 @@
       being placed inside.
       See <https://www.a11ymatters.com/pattern/mobile-nav/#use-a-semantic-element-for-the-nav>
     -->
-    <nav data-navigation-id="navigation">
+    <nav class="navigation" data-navigation-id="navigation">
 
       <button class="navigation__button" type="button" aria-label="Open navigation" aria-expanded="false" data-navigation-id="button">
         <svg class="burger" width="32" height="32" viewBox="0 0 32 32">

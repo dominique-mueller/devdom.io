@@ -3,7 +3,7 @@
 .header {
   position: relative; /* has absolute positioned children */
   height: 64px;
-  background-color: #223144;
+  background-color: #16374c;
   color: #fff;
 }
 
@@ -24,16 +24,6 @@
   height: 100%;
 }
 
-.header__bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #223144;
-  z-index: -1; /* behind upcoming elements */
-}
-
 @media (min-width: 720px) {
   .header__bar {
     display: none;
@@ -52,7 +42,7 @@
   padding: 4px 12px 3px;
   border-radius: 1px;
   background-color: #fff;
-  color: #223144;
+  color: #16374c;
   border: none; /* reset */
   font-size: 1rem;
   font-weight: 700;
@@ -66,15 +56,65 @@
 
 /* Navigation */
 
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  z-index: -1;
+}
+
+@media (min-width: 720px) {
+  .navigation {
+    position: unset;
+    top: unset;
+    left: unset;
+    width: unset;
+    height: unset;
+    display: unset;
+    justify-content: unset;
+    align-items: unset;
+    z-index: unset;
+  }
+}
+
+.navigation::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #16374c;
+}
+
+@media (min-width: 720px) {
+  .navigation::before {
+    content: unset;
+    position: unset;
+    top: unset;
+    left: unset;
+    width: unset;
+    height: unset;
+    background-color: unset;
+  }
+}
+
 .navigation__button {
   display: flex;
   padding: 3px 5px;
+  margin-right: 16px;
   border: none; /* reset */
   background-color: transparent; /* reset */
   color: #fff;
   border-radius: 1px;
   overflow: hidden; /* prevent weird visual glitching of focus outline due to internal animations overflowing button constraints */
   cursor: pointer;
+  transition: background-color 0.15s ease;
 }
 
 .navigation__button:hover,
@@ -106,10 +146,10 @@
   flex-direction: column;
   gap: 8px;
   padding: 4px 16px 16px;
-  background-color: #223144;
+  background-color: #16374c;
   transform: translateY(0);
   visibility: hidden;
-  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear 0.3s;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear 0.4s;
 }
 
 @media (min-width: 720px) {
@@ -132,7 +172,7 @@
 .navigation__list.is-visible {
   transform: translateY(100%);
   visibility: visible;
-  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1), opacity 0.2s cubic-bezier(0.65, 0, 0.35, 1) 0.1s, visibility 0s linear;
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1), visibility 0s linear;
 }
 
 @media (min-width: 720px) {
@@ -152,7 +192,7 @@
   font-weight: 700;
   white-space: nowrap;
   opacity: 0;
-  transition: background-color 0.15s ease, color 0.15s ease, opacity 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: background-color 0.15s ease, color 0.15s ease, opacity 0.25s ease;
 }
 
 .navigation__link:hover,
@@ -178,6 +218,7 @@
 
 .navigation__list.is-visible .navigation__link {
   opacity: 1;
+  transition: background-color 0.15s ease, color 0.15s ease, opacity 0.25s ease 0.2s;
 }
 
 @media (min-width: 720px) {
@@ -215,7 +256,7 @@
 
 .burger {
   transform: rotate(0);
-  transition: transform 0.3s cubic-bezier(0.37, 0, 0.63, 1);
+  transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
 .navigation__button.is-pressed .burger {
@@ -238,7 +279,7 @@
 
 .burger__line-top {
   transform: translateY(0) rotate(0);
-  transition: transform 0.3s cubic-bezier(0.37, 0, 0.63, 1);
+  transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
 .navigation__button.is-pressed .burger__line-top {
@@ -247,7 +288,7 @@
 
 .burger__line-bottom {
   transform: scaleX(1);
-  transition: transform 0.3s cubic-bezier(0.37, 0, 0.63, 1);
+  transition: transform 0.4s cubic-bezier(0.37, 0, 0.63, 1);
 }
 
 .navigation__button.is-pressed .burger__line-bottom {
@@ -256,7 +297,7 @@
 
 .burger__line-middle {
   transform: scaleX(1);
-  transition: opacity 0.2s cubic-bezier(0.37, 0, 0.63, 1) 0.1s, transform 0.2s cubic-bezier(0.37, 0, 0.63, 1) 0.1s;
+  transition: opacity 0.25s cubic-bezier(0.37, 0, 0.63, 1) 0.1s, transform 0.2s cubic-bezier(0.37, 0, 0.63, 1) 0.1s;
 }
 
 .navigation__button.is-pressed .burger__line-middle {
