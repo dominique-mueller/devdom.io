@@ -32,7 +32,7 @@
     </svg>
 
     {{ partial "header" . }}
-    <main data-navigation-ids="outside-navigation" class="container">{{ block "main" . }} {{ end }}</main>
-    <div data-navigation-ids="outside-navigation">{{ partial "footer" . }}</div>
+    <main data-navigation-id="outside" class="container">{{ block "main" . }} {{ end }}</main>
+    <div data-navigation-id="outside">{{ partial "footer" . }}</div>
   </body>
 </html>
