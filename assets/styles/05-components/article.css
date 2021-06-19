@@ -3,18 +3,18 @@
 .article {
   color: #333;
   font-size: 1.0625rem;
-  line-height: 1.9;
+  line-height: 1.85;
 }
 
 /* Article header */
 
 .article__header {
-  padding: 144px 64px 64px 64px;
+  padding: 120px 64px 64px 64px;
   text-align: center;
 }
 
 .article__metadata {
-  margin-top: 24px;
+  margin-top: 16px;
   margin-bottom: 8px;
 }
 
@@ -46,8 +46,8 @@
 /* Article content */
 
 .article__content {
-  /* improve readability by restricting content width to 60 characters */
-  /* see <https://baymard.com/blog/line-length-readability> */
+  /* Improve readability by restricting content width to 60 characters */
+  /* See <https://baymard.com/blog/line-length-readability> */
   max-width: 65ch;
   font-family: 'Merriweather', 'Times New Roman', serif;
   margin-left: auto;

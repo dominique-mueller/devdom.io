@@ -1,0 +1,10 @@
+/* Blog */
+
+.blog__header {
+  padding: 120px 64px 64px 64px;
+  text-align: center;
+}
+
+.blog__item + .blog__item {
+  margin-top: 80px;
+}

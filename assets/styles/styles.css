@@ -33,6 +33,8 @@
 
 /* Layer 05: Components */
 @import './05-components/article.css';
+@import './05-components/article-preview.css';
+@import './05-components/blog.css';
 @import './05-components/header.css';
 @import './05-components/heading.css';
 @import './05-components/highlight.css';
