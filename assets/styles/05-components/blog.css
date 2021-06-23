@@ -8,3 +8,7 @@
 .blog__item + .blog__item {
   margin-top: 80px;
 }
+
+.blog__pagination {
+  margin-top: 64px;
+}

@@ -38,5 +38,7 @@
 @import './05-components/header.css';
 @import './05-components/heading.css';
 @import './05-components/highlight.css';
+@import './05-components/pagination.css';
 
 /* Layer 05: Utilities */
+@import './06-utilities/is-visually-hidden.css';

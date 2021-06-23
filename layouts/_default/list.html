@@ -7,7 +7,9 @@
   </header>
 
   <ul class="ui-list">
-    {{ $paginator := .Paginate .Pages 10 }} {{ range $paginator.Pages }}
+    {{ $postsPerPage := 10 }}
+    {{ $paginator := .Paginate .Pages $postsPerPage }}
+    {{ range $paginator.Pages }}
     <li class="ui-list__item blog__item">
 
       <article class="article-preview" itemscope itemtype="http://schema.org/BlogPosting">
@@ -41,5 +43,9 @@
   </ul>
 
 </section>
+
+<div class="blog__pagination">
+  {{ partial "pagination" . }}
+</div>
 
 {{ end }}
