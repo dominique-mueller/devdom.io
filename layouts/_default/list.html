@@ -30,7 +30,7 @@
           Published on <strong><time datetime="{{ .Date.Format "2006-01-01" }}" itemprop="datePublished">{{ .Date.Format "January 1, 2006" }}</time></strong>
         </p>
 
-        <p class="article-preview__description" itemprop="description">{{ .Description }}</p>
+        <p itemprop="description">{{ .Description }}</p>
 
         <a class="article-preview__link" href="{{ .RelPermalink }}">
           Read more
