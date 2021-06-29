@@ -9,7 +9,7 @@ code {
   border-radius: 3px;
   background-color: #eee;
   font-family: 'Consolas', monospace;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 /* Code block */
@@ -48,7 +48,7 @@ pre code {
   border-bottom: unset;
   border-radius: unset;
   background-color: unset;
-  font-size: 0.9375rem;
+  font-size: 1rem;
   line-height: 1.5;
 }
 
@@ -62,6 +62,6 @@ kbd {
   border-top: 0.25em solid #eee; /* replacement for padding-top which does not work on "display: inline" elements */
   border-radius: 3px;
   background-color: #eee;
-  font-family: monospace;
-  font-size: 0.875rem;
+  font-family: 'Consolas', monospace;
+  font-size: 1rem;
 }

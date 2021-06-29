@@ -3,5 +3,6 @@
 body {
   margin: 0; /* reset */
   background-color: #fdfdfd;
+  color: #333;
   font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
 }

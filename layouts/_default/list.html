@@ -1,11 +1,51 @@
 {{ define "main" }}
 
-<h1>{{ .Title }}</div>
+<section itemscope itemtype="http://schema.org/Blog">
 
-<ul>
-  {{ $paginator := .Paginate .Pages 10 }} {{ range $paginator.Pages }}
-  <li>{{ .Title }}</li>
-  {{ end }}
-</ul>
+  <header class="blog__header">
+    <h1 itemprop="headline">{{ .Title }}</h1>
+  </header>
+
+  <ul class="ui-list">
+    {{ $postsPerPage := 10 }}
+    {{ $paginator := .Paginate .Pages $postsPerPage }}
+    {{ range $paginator.Pages }}
+    <li class="ui-list__item blog__item">
+
+      <article class="article-preview" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <!--
+          NOTE:
+          Both "h2" within "a" and "a" within "h2" is valid per HTML5 spec. We choose "a" within "h2" simply because "a" is "display: inline" by
+          default, so it "feels more right".
+          See <https://stackoverflow.com/a/7023551/3510888>
+        -->
+        <h2 class="article-preview__title" itemprop="headline">
+          <a class="article-preview__title-link" href="{{ .RelPermalink }}" itemprop="url">
+            {{ .Title }}
+          </a>
+        </h2>
+
+        <p class="article-preview__metadata">
+          Published on <strong><time datetime="{{ .Date.Format "2006-01-01" }}" itemprop="datePublished">{{ .Date.Format "January 1, 2006" }}</time></strong>
+        </p>
+
+        <p itemprop="description">{{ .Description }}</p>
+
+        <a class="article-preview__link" href="{{ .RelPermalink }}">
+          Read more
+        </a>
+
+      </article>
+
+    </li>
+    {{ end }}
+  </ul>
+
+</section>
+
+<div class="blog__pagination">
+  {{ partial "pagination" . }}
+</div>
 
 {{ end }}

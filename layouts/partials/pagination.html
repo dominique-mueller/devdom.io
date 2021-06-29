@@ -1,0 +1,54 @@
+{{ $isPaginated := gt .Paginator.TotalPages 1 }}
+{{ if $isPaginated }}
+<nav class="pagination" aria-label="Pagination">
+	<ul class="ui-list pagination__list">
+
+		<li class="ui-list__item">
+			<a class="pagination__link{{ if not .Paginator.HasPrev }} is-disabled{{ end }}"{{ if .Paginator.HasPrev }} href="{{ .Paginator.Prev.URL }}"{{ end }} {{ if not .Paginator.HasPrev }} role="button" aria-disabled="true"{{ end }}>
+				<span class="is-visually-hidden">Go to previous page</span>
+				<svg focusable="false" class="pagination__icon pagination__icon--arrow-left" role="img" aria-hidden="true">
+					<use xlink:href="#icon-arrow-left"></use>
+				</svg>
+			</a>
+		</li>
+
+		{{ $adjacentPageLinks := 3 }}
+		{{ $currentPageNumber := .Paginator.PageNumber }}
+		{{ range .Paginator.Pagers }}
+
+			{{ if eq .PageNumber 1 }}
+			<li class="ui-list__item">
+				<a class="pagination__link{{ if eq .PageNumber $currentPageNumber }} is-active{{ end }}" href="{{ .URL }}"{{ if eq .PageNumber $currentPageNumber }} aria-current="page"{{ end }}>
+					<span class="is-visually-hidden">Go to page&nbsp;</span>{{ .PageNumber }}
+				</a>
+			</li>
+			{{ else if eq .PageNumber .TotalPages }}
+			<li class="ui-list__item">
+				<a class="pagination__link{{ if eq .PageNumber $currentPageNumber }} is-active{{ end }}" href="{{ .URL }}"{{ if eq .PageNumber $currentPageNumber }} aria-current="page"{{ end }}>
+					<span class="is-visually-hidden">Go to page&nbsp;</span>{{ .PageNumber }}
+				</a>
+			</li>
+			{{ else if and ( lt .PageNumber ( add $currentPageNumber $adjacentPageLinks ) ) ( gt .PageNumber ( sub $currentPageNumber $adjacentPageLinks ) ) }}
+			<li class="ui-list__item">
+				<a class="pagination__link{{ if eq .PageNumber $currentPageNumber }} is-active{{ end }}" href="{{ .URL }}"{{ if eq .PageNumber $currentPageNumber }} aria-current="page"{{ end }}>
+					<span class="is-visually-hidden">Go to page&nbsp;</span>{{ .PageNumber }}
+				</a>
+			</li>
+			{{ else if or ( eq .PageNumber ( add $currentPageNumber $adjacentPageLinks ) ) ( eq .PageNumber ( sub $currentPageNumber $adjacentPageLinks ) ) }}
+			<li class="ui-list__item pagination__item--ellipsis" aria-hidden="true">…</li>
+			{{ end }}
+
+		{{ end }}
+
+		<li class="ui-list__item">
+			<a class="pagination__link{{ if not .Paginator.HasNext }} is-disabled{{ end }}"{{ if .Paginator.HasNext }} href="{{ .Paginator.Next.URL }}"{{ end }} {{ if not .Paginator.HasNext }} role="button" aria-disabled="true"{{ end }}>
+				<span class="is-visually-hidden">Go to next page</span>
+				<svg focusable="false" class="pagination__icon pagination__icon--arrow-right" role="img" aria-hidden="true">
+					<use xlink:href="#icon-arrow-right"></use>
+				</svg>
+			</a>
+		</li>
+
+	</ul>
+</nav>
+{{ end }}

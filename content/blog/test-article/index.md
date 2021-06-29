@@ -1,11 +1,12 @@
 ---
 title: My test article, with a potentially very long title that spans multiple lines
+description: This is a test article. It contains all kinds of content, so that we can verify that all the styling stuff and responsive behaviour is working as expected. Not the most beautiful blog article, but it's a start!
 date: 2020-03-15
 author: Dominique Müller
 tags:
-- development
-- react
-- design-systems
+  - development
+  - react
+  - design-systems
 ---
 
 An introduction to the article could be presented right here.

@@ -1,0 +1,41 @@
+/* Article Preview */
+
+.article-preview {
+  /* Improve readability by restricting content width based on characters */
+  /* See <https://baymard.com/blog/line-length-readability> */
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Merriweather', 'Times New Roman', serif;
+  font-size: 1.0625rem;
+  line-height: 1.9;
+}
+
+.article-preview__title {
+  margin-top: 0;
+}
+
+.article-preview__title-link {
+  color: inherit;
+  border: unset;
+  transition: unset;
+}
+
+.article-preview__title-link:hover,
+.article-preview__title-link:focus,
+.article-preview__title-link:active {
+  background-color: unset;
+  border-bottom-color: unset;
+  text-decoration: underline;
+}
+
+.article-preview__metadata {
+  margin-top: 0.25em;
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+  color: #888;
+  font-size: 1rem;
+}
+
+.article-preview__link {
+  font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
+}
