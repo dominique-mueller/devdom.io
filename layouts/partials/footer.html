@@ -1,30 +1,32 @@
 <footer class="footer">
-  <nav aria-label="Social Media">
-    <ul class="ui-list social-media__list">
-      {{ range .Site.Data.socialMedia }}
-      <li class="ui-list__item">
-        <a
-          href="{{ .link }}"
-          target="_blank"
-          rel="noreferrer noopener"
-          class="social-media__link social-media__link--{{ .id }}"
-          aria-label="{{ .label }}"
-          title="{{ .label }}"
-        >
-          <svg width="30px" height="30px" class="social-media__icon" focusable="false" role="img" aria-hidden="true">
-            <use xlink:href="#icon-{{ .id }}"></use>
-          </svg>
-        </a>
-      </li>
-      {{ end }}
-    </ul>
-  </nav>
+  <div class="container footer__container">
+    <nav aria-label="Social Media">
+      <ul class="ui-list social-media__list">
+        {{ range .Site.Data.socialMedia }}
+        <li class="ui-list__item">
+          <a
+            href="{{ .link }}"
+            target="_blank"
+            rel="noreferrer noopener"
+            class="social-media__link social-media__link--{{ .id }}"
+            aria-label="{{ .label }}"
+            title="{{ .label }}"
+          >
+            <svg width="30px" height="30px" class="social-media__icon" focusable="false" role="img" aria-hidden="true">
+              <use xlink:href="#icon-{{ .id }}"></use>
+            </svg>
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </nav>
 
-  <p class="footer__text">
-    &copy; 2021 Dominique Müller
-    <span class="footer__link-separator" aria-hidden="true">·</span>
-    <a href="#">Legal Notice</a>
-    <span class="footer__link-separator" aria-hidden="true">·</span>
-    <a href="#">Privacy Policy</a>
-  </p>
+    <p class="footer__text">
+      &copy; 2021 Dominique Müller
+      <span class="footer__link-separator" aria-hidden="true">·</span>
+      <a href="#">Legal Notice</a>
+      <span class="footer__link-separator" aria-hidden="true">·</span>
+      <a href="#">Privacy Policy</a>
+    </p>
+  </div>
 </footer>
