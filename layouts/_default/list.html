@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<section itemscope itemtype="http://schema.org/Blog">
+<div class="blog" itemscope itemtype="http://schema.org/Blog">
 
   <header class="blog__header">
     <h1 itemprop="headline">{{ .Title }}</h1>
@@ -33,7 +33,7 @@
         <p itemprop="description">{{ .Description }}</p>
 
         <a class="article-preview__link" href="{{ .RelPermalink }}">
-          Read more
+          Continue reading
         </a>
 
       </article>
@@ -42,10 +42,10 @@
     {{ end }}
   </ul>
 
-</section>
+  <div class="blog__pagination">
+    {{ partial "pagination" . }}
+  </div>
 
-<div class="blog__pagination">
-  {{ partial "pagination" . }}
 </div>
 
 {{ end }}

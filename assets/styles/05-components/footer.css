@@ -1,0 +1,75 @@
+/* Footer */
+
+.footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-top: 2px solid #eaeaea;
+  text-align: center;
+  font-size: 0.875rem;
+  background-color: #fafafa;
+}
+
+.footer__text {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+.footer__link-separator {
+  padding-left: 0.625em;
+  padding-right: 0.625em;
+  color: #666;
+  user-select: none;
+}
+
+/* Social media */
+
+.social-media__list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.social-media__link {
+  display: block;
+  padding: 6px;
+  border: none; /* reset */
+  color: #555;
+  border-radius: 50%;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.social-media__link:hover,
+.social-media__link:focus,
+.social-media__link:active {
+  background-color: transparent;
+}
+
+.social-media__link--twitter:hover,
+.social-media__link--twitter:focus,
+.social-media__link--twitter:active {
+  color: #1da1f2; /* See <https://brandcolors.net/b/twitter> */
+}
+
+.social-media__link--github:hover,
+.social-media__link--github:focus,
+.social-media__link--github:active {
+  color: #333; /* See <https://brandcolors.net/b/github> */
+}
+
+.social-media__link--behance:hover,
+.social-media__link--behance:focus,
+.social-media__link--behance:active {
+  color: #1769ff; /* See <https://brandcolors.net/b/behance> */
+}
+
+.social-media__link--unsplash:hover,
+.social-media__link--unsplash:focus,
+.social-media__link--unsplash:active {
+  color: #000; /* Taken from the Unsplash logo */
+}
+
+.social-media__icon {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}
