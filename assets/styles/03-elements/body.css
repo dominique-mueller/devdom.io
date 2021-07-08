@@ -1,7 +1,10 @@
 /* body */
 
 body {
+  display: flex;
+  flex-direction: column;
   margin: 0; /* reset */
+  min-height: 100vh; /* stretch body to at least full height */
   background-color: #fdfdfd;
   color: #333;
   font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
