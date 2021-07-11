@@ -1,6 +1,6 @@
-/* Article */
+/* Post */
 
-.article {
+.post {
   padding-top: 64px;
   padding-bottom: 64px;
   color: #333;
@@ -8,30 +8,30 @@
   line-height: 1.9;
 }
 
-/* Article header */
+/* Header */
 
-.article__header {
+.post__header {
   padding: 64px;
   text-align: center;
 }
 
-.article__metadata {
+.post__metadata {
   margin-top: 16px;
   margin-bottom: 8px;
 }
 
-.article__metadata-separator {
+.post__metadata-separator {
   padding-left: 0.25em;
   padding-right: 0.25em;
 }
 
-.article__tags {
+.post__tags {
   display: flex;
   justify-content: center;
   gap: 8px;
 }
 
-.article__tag {
+.post__tag {
   padding-inline-start: 0.875em;
   padding-inline-end: 0.875em;
   padding-block-start: 0.4em;
@@ -45,9 +45,9 @@
   white-space: nowrap;
 }
 
-/* Article content */
+/* Content */
 
-.article__content {
+.post__content {
   /* Improve readability by restricting content width based on characters */
   /* See <https://baymard.com/blog/line-length-readability> */
   max-width: 62ch;
