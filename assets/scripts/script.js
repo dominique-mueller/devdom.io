@@ -1,7 +1,7 @@
 /**
  * Constants
  */
-const mediaQueryBreakpoint = '(min-width: 720px)';
+const mediaQueryBreakpoint = '(min-width: 768px)';
 
 /**
  * Utility: Format boolean value to string

@@ -7,54 +7,79 @@
 }
 
 .footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-top: 24px;
   padding-bottom: 24px;
+  gap: 12px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 768px) {
   .footer__container {
-    padding-top: 16px;
-    padding-bottom: 16px;
-    display: flex;
-    justify-content: space-between;
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
 }
 
-.footer__text {
-  margin-top: 0.75em;
-  margin-bottom: 0.75em;
+/* Content */
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
 }
 
-.footer__link-separator {
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+@media (min-width: 576px) {
+  .footer__content {
+    flex-direction: row;
+    gap: 0;
+  }
+}
+
+/* Legal info */
+
+.footer__legal-info-list {
+  display: inline-flex; /* prevent weird pseudo-element spacing that exists with "inline-block" */
+}
+
+.footer__legal-info-item {
+  display: inline-flex; /* prevent weird pseudo-element spacing that exists with "inline-block" */
+}
+
+.footer__legal-info-item::before {
+  content: '·';
+  padding-left: 0.75em;
+  padding-right: 0.75em;
   color: #666;
-  user-select: none;
 }
 
-@media (min-width: 720px) {
-  .footer__link-separator {
-    padding-left: 0.25em;
-    padding-right: 0.25em;
+.footer__legal-info-item:first-of-type::before {
+  display: none;
+}
+
+@media (min-width: 576px) {
+  .footer__legal-info-item:first-of-type::before {
+    display: inline;
   }
 }
 
 /* Social media */
 
-.social-media__list {
+.footer__social-media-list {
   display: flex;
   gap: 16px;
   justify-content: center;
 }
 
-@media (min-width: 720px) {
-  .social-media__list {
+@media (min-width: 768px) {
+  .footer__social-media-list {
     gap: 4px;
   }
 }
 
-.social-media__link {
+.footer__social-media-link {
   display: block;
   padding: 6px;
   border: none; /* reset */
@@ -63,37 +88,37 @@
   transition: color 0.15s ease, background-color 0.15s ease;
 }
 
-.social-media__link:hover,
-.social-media__link:focus,
-.social-media__link:active {
+.footer__social-media-link:hover,
+.footer__social-media-link:focus,
+.footer__social-media-link:active {
   background-color: transparent;
 }
 
-.social-media__link--twitter:hover,
-.social-media__link--twitter:focus,
-.social-media__link--twitter:active {
+.footer__social-media-link--twitter:hover,
+.footer__social-media-link--twitter:focus,
+.footer__social-media-link--twitter:active {
   color: #1da1f2; /* See <https://brandcolors.net/b/twitter> */
 }
 
-.social-media__link--github:hover,
-.social-media__link--github:focus,
-.social-media__link--github:active {
+.footer__social-media-link--github:hover,
+.footer__social-media-link--github:focus,
+.footer__social-media-link--github:active {
   color: #333; /* See <https://brandcolors.net/b/github> */
 }
 
-.social-media__link--behance:hover,
-.social-media__link--behance:focus,
-.social-media__link--behance:active {
+.footer__social-media-link--behance:hover,
+.footer__social-media-link--behance:focus,
+.footer__social-media-link--behance:active {
   color: #1769ff; /* See <https://brandcolors.net/b/behance> */
 }
 
-.social-media__link--unsplash:hover,
-.social-media__link--unsplash:focus,
-.social-media__link--unsplash:active {
+.footer__social-media-link--unsplash:hover,
+.footer__social-media-link--unsplash:focus,
+.footer__social-media-link--unsplash:active {
   color: #000; /* Taken from the Unsplash logo */
 }
 
-.social-media__icon {
+.footer__social-media-icon {
   width: 30px;
   height: 30px;
   fill: currentColor;

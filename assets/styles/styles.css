@@ -9,6 +9,12 @@
   - Naming convention of stateful classes follows the SMACSS naming convention
 */
 
+/*
+  Breakpoints:
+  - 768px
+  - 576px
+*/
+
 /* Layer 01: Settings */
 @import './01-settings/colors.css';
 

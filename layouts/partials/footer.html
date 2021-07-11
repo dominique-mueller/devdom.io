@@ -1,18 +1,18 @@
 <footer class="footer" data-navigation-id="outside">
   <div class="container footer__container">
     <nav aria-label="Social Media">
-      <ul class="ui-list social-media__list">
+      <ul class="ui-list footer__social-media-list">
         {{ range .Site.Data.socialMedia }}
         <li class="ui-list__item">
           <a
             href="{{ .link }}"
             target="_blank"
             rel="noreferrer noopener"
-            class="social-media__link social-media__link--{{ .id }}"
+            class="footer__social-media-link footer__social-media-link--{{ .id }}"
             aria-label="{{ .label }}"
             title="{{ .label }}"
           >
-            <svg width="30px" height="30px" class="social-media__icon" focusable="false" role="img" aria-hidden="true">
+            <svg width="30px" height="30px" class="social-media-icon" focusable="false" role="img" aria-hidden="true">
               <use xlink:href="#icon-{{ .id }}"></use>
             </svg>
           </a>
@@ -21,12 +21,19 @@
       </ul>
     </nav>
 
-    <div class="footer__text">
-      <span>&copy; 2021 Dominique Müller</span>
-      <span class="footer__link-separator" aria-hidden="true">·</span>
-      <a href="#">Legal Notice</a>
-      <span class="footer__link-separator" aria-hidden="true">·</span>
-      <a href="#">Privacy Policy</a>
+    <div class="footer__content">
+      <div>&copy; 2021 Dominique Müller</div>
+
+      <nav aria-label="Legal info">
+        <ul class="ui-list footer__legal-info-list">
+          <li class="ui-list__item footer__legal-info-item">
+            <a href="#">Legal Notice</a>
+          </li>
+          <li class="ui-list__item footer__legal-info-item">
+            <a href="#">Privacy Policy</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </footer>
