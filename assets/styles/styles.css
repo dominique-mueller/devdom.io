@@ -9,6 +9,12 @@
   - Naming convention of stateful classes follows the SMACSS naming convention
 */
 
+/*
+  Breakpoints:
+  - 768px
+  - 576px
+*/
+
 /* Layer 01: Settings */
 @import './01-settings/colors.css';
 
@@ -24,6 +30,7 @@
 @import './03-elements/image.css';
 @import './03-elements/link.css';
 @import './03-elements/list.css';
+@import './03-elements/main.css';
 @import './03-elements/table.css';
 @import './03-elements/text.css';
 
@@ -35,6 +42,7 @@
 @import './05-components/article.css';
 @import './05-components/article-preview.css';
 @import './05-components/blog.css';
+@import './05-components/footer.css';
 @import './05-components/header.css';
 @import './05-components/heading.css';
 @import './05-components/highlight.css';

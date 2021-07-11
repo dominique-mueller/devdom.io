@@ -1,6 +1,8 @@
 /* Article */
 
 .article {
+  padding-top: 64px;
+  padding-bottom: 64px;
   color: #333;
   font-size: 1.0625rem;
   line-height: 1.9;
@@ -9,7 +11,7 @@
 /* Article header */
 
 .article__header {
-  padding: 120px 64px 64px 64px;
+  padding: 64px;
   text-align: center;
 }
 

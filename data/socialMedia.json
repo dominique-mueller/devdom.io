@@ -1,0 +1,22 @@
+[
+  {
+    "id": "twitter",
+    "link": "https://twitter.com/itsdevdom",
+    "label": "Twitter"
+  },
+  {
+    "id": "github",
+    "link": "https://github.com/dominique-mueller",
+    "label": "GitHub"
+  },
+  {
+    "id": "behance",
+    "link": "https://www.behance.net/itsdevdom",
+    "label": "Behance"
+  },
+  {
+    "id": "unsplash",
+    "link": "https://unsplash.com/@itsdevdom",
+    "label": "Unsplash"
+  }
+]

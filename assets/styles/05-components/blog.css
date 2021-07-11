@@ -1,7 +1,12 @@
 /* Blog */
 
+.blog {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
 .blog__header {
-  padding: 120px 64px 88px 64px;
+  padding: 64px 64px 88px 64px;
   text-align: center;
 }
 
