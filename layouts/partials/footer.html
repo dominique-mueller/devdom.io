@@ -24,12 +24,22 @@
     <div class="footer__content">
       <div>&copy; 2021 Dominique Müller</div>
 
+      <!--
+        NOTE:
+        To support users of assistive technologies, bullet dividers are implemented as HTML elements and hidden from screen readers by
+        setting the "aria-hidden" attribute to "true". I would've preferred the alternative of using pseudo elements instead in order to
+        achieve a leaner DOM, but it seems that screen readers focus / read out those pseudo elements, and any ways of preventing this (e.g.
+        using "content" alt text, settings the CSS "speech" property to "never") do not work / do not work reliably / do not work across
+        major browsers (often Chrome only).
+      -->
       <nav aria-label="Legal info">
         <ul class="ui-list footer__legal-info-list">
           <li class="ui-list__item footer__legal-info-item">
+            <span class="footer__legal-info-separator footer__legal-info-separator--first" aria-hidden="true">·</span>
             <a href="#">Legal Notice</a>
           </li>
           <li class="ui-list__item footer__legal-info-item">
+            <span class="footer__legal-info-separator" aria-hidden="true">·</span>
             <a href="#">Privacy Policy</a>
           </li>
         </ul>
