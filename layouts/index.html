@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+<div class="home">
+  <div class="container profile">
+    {{ $image := resources.Get "./images/profile.jpg" | resources.Fingerprint "md5" }}
+    <img src="{{ $image.RelPermalink }}" width="{{ $image.Width }}" height="{{ $image.Height }}" alt="" class="profile__image" />
+
+    <p class="profile__text">
+      <span class="profile__intro">
+        Hello, I am
+      </span>
+      <span class="profile__name">
+        Dominique Müller
+      </span>
+      <span class="profile__description">
+        a <strong>Web Developer</strong> based in Frankfurt am Main, Germany. I'm passionate about developing visually appealing, user
+        friendly and accessible websites and web applications.
+      </span>
+    </p>
+  </div>
+</div>
+
+{{ end }}

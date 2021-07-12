@@ -1,20 +1,20 @@
 {{ define "main" }}
 
-<article class="container article" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="container post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="article__header">
+  <header class="post__header">
 
-    <h1 class="article__title" itemprop="headline">{{ .Title }}</h1>
+    <h1 class="post__title" itemprop="headline">{{ .Title }}</h1>
 
-    <p class="article__metadata">
+    <p class="post__metadata">
       Written by <strong itemscope itemtype="https://schema.org/Person" itemprop="author"><span itemprop="name">{{ .Params.author }}</span></strong>
-      <span class="article__metadata-separator">&ndash;</span>
+      <span class="post__metadata-separator">&ndash;</span>
       Published on <strong><time datetime="{{ .Date.Format "2006-01-01" }}" itemprop="datePublished">{{ .Date.Format "January 1, 2006" }}</time></strong>
     </p>
 
-    <ul class="ui-list article__tags" aria-label="Tags">
+    <ul class="ui-list post__tags" aria-label="Tags">
       {{ range .Params.tags }}
-      <li class="ui-list__item article__tag" itemprop="about">
+      <li class="ui-list__item post__tag" itemprop="about">
         {{ . }}
       </li>
       {{ end }}
@@ -22,7 +22,7 @@
 
   </header>
 
-  <div class="article__content" itemprop="articleBody">{{ .Content }}</div>
+  <div class="post__content" itemprop="articleBody">{{ .Content }}</div>
 
 </article>
 

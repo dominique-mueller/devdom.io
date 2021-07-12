@@ -39,14 +39,15 @@
 @import './04-objects/ui-list.css';
 
 /* Layer 05: Components */
-@import './05-components/article.css';
-@import './05-components/article-preview.css';
-@import './05-components/blog.css';
-@import './05-components/footer.css';
-@import './05-components/header.css';
-@import './05-components/heading.css';
-@import './05-components/highlight.css';
-@import './05-components/pagination.css';
+@import './05-components/components/footer.css';
+@import './05-components/components/header.css';
+@import './05-components/components/heading.css';
+@import './05-components/components/highlight.css';
+@import './05-components/components/pagination.css';
+@import './05-components/components/post-preview.css';
+@import './05-components/components/post.css';
+@import './05-components/pages/blog.css';
+@import './05-components/pages/home.css';
 
 /* Layer 05: Utilities */
 @import './06-utilities/is-visually-hidden.css';
