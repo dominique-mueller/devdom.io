@@ -41,26 +41,26 @@
 /* Legal info */
 
 .footer__legal-info-list {
-  display: inline-flex; /* prevent weird pseudo-element spacing that exists with "inline-block" */
+  display: inline-flex; /* prevent spacing issues */
 }
 
 .footer__legal-info-item {
-  display: inline-flex; /* prevent weird pseudo-element spacing that exists with "inline-block" */
+  display: inline-flex; /* prevent spacing issues */
 }
 
-.footer__legal-info-item::before {
-  content: '·';
+.footer__legal-info-separator {
   padding-left: 0.75em;
   padding-right: 0.75em;
   color: #666;
+  user-select: none;
 }
 
-.footer__legal-info-item:first-of-type::before {
+.footer__legal-info-separator--first {
   display: none;
 }
 
 @media (min-width: 576px) {
-  .footer__legal-info-item:first-of-type::before {
+  .footer__legal-info-separator--first {
     display: inline;
   }
 }
